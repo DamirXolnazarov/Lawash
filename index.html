@@ -71,16 +71,18 @@
 
     #mahsulotlar { background: var(--white); }
     .products-header { max-width: 560px; margin-bottom: 64px; }
-    .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--cream-dark); }
-    .product-card { background: var(--white); padding: 48px 40px; position: relative; overflow: hidden; transition: transform 0.3s; }
-    .product-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.35s; }
+    .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; background: transparent; }
+    .product-card { background: var(--white); padding: 0; position: relative; overflow: hidden; transition: transform 0.35s, box-shadow 0.35s; border-radius: 24px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05); }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 28px 60px rgba(0, 0, 0, 0.09); }
+    .product-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.35s; }
     .product-card:hover::before { transform: scaleX(1); }
-    .product-card:hover { transform: translateY(-4px); }
-    .product-num { font-size: 11px; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 20px; }
-    .product-name { font-family: "Cormorant Garamond", serif; font-size: 28px; font-weight: 600; color: var(--green-dark); margin-bottom: 16px; }
-    .product-desc { font-size: 14px; line-height: 1.7; color: var(--text-muted); margin-bottom: 28px; }
-    .product-price { font-family: "Cormorant Garamond", serif; font-size: 34px; font-weight: 600; color: var(--green-dark); }
-    .product-unit { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    .product-card-inner { padding: 32px 28px 36px; display: flex; flex-direction: column; gap: 18px; }
+    .product-image { width: 100%; display: block; object-fit: cover; aspect-ratio: 4 / 3; border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .product-num { font-size: 11px; letter-spacing: 0.12em; color: var(--gold); margin-top: 8px; }
+    .product-name { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 600; color: var(--green-dark); margin-bottom: 10px; }
+    .product-desc { font-size: 15px; line-height: 1.8; color: var(--text-muted); margin-bottom: 14px; }
+    .product-price { font-family: "Cormorant Garamond", serif; font-size: 32px; font-weight: 600; color: var(--green-dark); }
+    .product-unit { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
 
     #afzalliklar { background: var(--green-dark); }
     #afzalliklar .section-label { color: var(--gold-light); }
@@ -202,25 +204,34 @@
   </div>
   <div class="products-grid">
     <div class="product-card fade-in">
-      <div class="product-num">01</div>
-      <div class="product-name">Lavash Standart</div>
-      <div class="product-desc">Eng ko'p talab qilinadigan o'lcham. Ko'plab ovqatlanish korxonalari uchun mos.</div>
-      <div class="product-price">34 000 so'm</div>
-      <div class="product-unit">paket uchun</div>
+      <img class="product-image" src="standart.jpg" alt="Lavash Standart">
+      <div class="product-card-inner">
+        <div class="product-num">01</div>
+        <div class="product-name">Lavash Standart</div>
+        <div class="product-desc">Eng ko'p talab qilinadigan o'lcham. Ko'plab ovqatlanish korxonalari uchun mos.</div>
+        <div class="product-price">34 000 so'm</div>
+        <div class="product-unit">paket uchun</div>
+      </div>
     </div>
     <div class="product-card fade-in">
-      <div class="product-num">02</div>
-      <div class="product-name">Lavash Tonkiy</div>
-      <div class="product-desc">Yupqa va egiluvchan. Professional foydalanish uchun.</div>
-      <div class="product-price">42 000 so'm</div>
-      <div class="product-unit">paket uchun</div>
+      <img class="product-image" src="tonkiy.jpg" alt="Lavash Tonkiy">
+      <div class="product-card-inner">
+        <div class="product-num">02</div>
+        <div class="product-name">Lavash Tonkiy</div>
+        <div class="product-desc">Yupqa va egiluvchan. Professional foydalanish uchun.</div>
+        <div class="product-price">42 000 so'm</div>
+        <div class="product-unit">paket uchun</div>
+      </div>
     </div>
     <div class="product-card fade-in">
-      <div class="product-num">03</div>
-      <div class="product-name">Lavash Bolshoy</div>
-      <div class="product-desc">Katta o'lcham. Maksimal qulaylik va qamrov.</div>
-      <div class="product-price">44 000 so'm</div>
-      <div class="product-unit">paket uchun</div>
+      <img class="product-image" src="bolshoy.jpg" alt="Lavash Bolshoy">
+      <div class="product-card-inner">
+        <div class="product-num">03</div>
+        <div class="product-name">Lavash Bolshoy</div>
+        <div class="product-desc">Katta o'lcham. Maksimal qulaylik va qamrov.</div>
+        <div class="product-price">44 000 so'm</div>
+        <div class="product-unit">paket uchun</div>
+      </div>
     </div>
   </div>
 </section>
