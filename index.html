@@ -77,9 +77,9 @@
     .product-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.35s; }
     .product-card:hover::before { transform: scaleX(1); }
     .product-card-inner { padding: 32px 28px 36px; display: flex; flex-direction: column; gap: 18px; }
-    .product-image { width: 100%; display: block; object-fit: cover; aspect-ratio: 4 / 3; border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .product-image { width: 100%; display: block; object-fit: contain; aspect-ratio: 4 / 3; border-bottom: 1px solid rgba(0,0,0,0.04); }
     .product-num { font-size: 11px; letter-spacing: 0.12em; color: var(--gold); margin-top: 8px; }
-    .product-name { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 600; color: var(--green-dark); margin-bottom: 10px; }
+    .product-name { font-family: "Cormorant Garamond", serif; font-size: 30px; font-weight: 600; color: var(--green-dark); margin-bottom: 10px; }
     .product-desc { font-size: 15px; line-height: 1.8; color: var(--text-muted); margin-bottom: 14px; }
     .product-price { font-family: "Cormorant Garamond", serif; font-size: 32px; font-weight: 600; color: var(--green-dark); }
     .product-unit { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
